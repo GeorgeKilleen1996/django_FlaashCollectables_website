@@ -1,0 +1,1 @@
+# django_FlaashCollectables_website
