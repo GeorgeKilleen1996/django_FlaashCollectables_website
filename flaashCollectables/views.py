@@ -5,7 +5,7 @@ from django.http import HttpResponse
 
 # Home Page
 def index(response):
-	return HttpResponse("<h1>Home</h1>")
+	return render(response, "flaashCollectables/home.html", {})
 
 # Pokemon Section
 def pokemonhome(response):
