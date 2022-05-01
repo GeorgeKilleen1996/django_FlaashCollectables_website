@@ -5,23 +5,63 @@ from django.http import HttpResponse
 
 # Home Page
 def index(response):
+	return render(response, "flaashCollectables/base.html", {})
+
+def home(response):
 	return render(response, "flaashCollectables/home.html", {})
 
 # Pokemon Section
-def pokemonhome(response):
-	return HttpResponse("<h1>pokemon home</h1>")
 
 def pokemonsingles(response):
-	return HttpResponse("<h1>singles</h1>")
-
-def pokemonbundles(response):
-	return HttpResponse("<h1>bundles</h1>")
+	return render(response, "flaashCollectables/pokemon/pokemonsingles.html", {})
 
 def pokemonsealedproduct(response):
-	return HttpResponse("<h1>sealed product</h1>")
+	return render(response, "flaashCollectables/pokemon/pokemonsealedproduct.html", {})
 
 def pokemongradedcards(response):
-	return HttpResponse("<h1>graded cards</h1>")
+	return render(response, "flaashCollectables/pokemon/pokemongradedcards.html", {})
 
-def pokemonaccessories(response):
-	return HttpResponse("<h1>accessories</h1>")
+def pokemonbundles(response):
+	return render(response, "flaashCollectables/pokemon/pokemonbundles.html", {})
+
+# Sports Section
+
+def sportssinglecards(response):
+	return render(response, "flaashCollectables/sports/sportssinglecards.html", {})
+
+def sportssinglestickers(response):
+	return render(response, "flaashCollectables/sports/sportssinglestickers.html", {})
+
+def sportsgradedcards(response):
+	return render(response, "flaashCollectables/sports/sportsgradedcards.html", {})
+
+def sportssealedproduct(response):
+	return render(response, "flaashCollectables/sports/sportssealedproduct.html", {})
+
+# Funko Section
+
+def funko(response):
+	return render(response, "flaashCollectables/funko.html", {})
+
+# Other Section
+
+def magicthegathering(response):
+	return render(response, "flaashCollectables/other/magicthegathering.html", {})
+
+def yugioh(response):
+	return render(response, "flaashCollectables/other/yugioh.html", {})
+
+# Accessories Section
+
+def accessories(response):
+	return render(response, "flaashCollectables/accessories.html", {})
+
+# Sale Section
+
+def sale(response):
+	return render(response, "flaashCollectables/sale.html", {})
+
+# Coming Soon Section
+
+def comingsoon(response):
+	return render(response, "flaashCollectables/comingsoon.html", {})

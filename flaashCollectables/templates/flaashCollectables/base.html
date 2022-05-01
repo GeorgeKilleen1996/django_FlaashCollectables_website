@@ -22,7 +22,11 @@
 		<div class="container" style="background-color: #F6CA36; max-width: 100%; height: 150px; box-shadow: 0px 2px #3662F6; align-items: center; display: flex; justify-content: center;">
 			<!-- HEADER LOGO -->
 			<div class="container" style="width: 200px">
+				<button style="border: 0px;">
+					<a href="/">
 				<img src="{% static 'flaashCollectables/images/FlaashCollectablesLogo.png' %}" style="width: 150px; height: 150px;">
+				</a>
+				</button>
 			</div>
 			<!-- SEARCH BAR -->
 			<div class="container" style="width: 100%">
@@ -50,29 +54,29 @@
 				<ul>
 					<li><a href="#">Pokemon TCG</a>
 						<ul>
-							<li><a href="#">Card Singles</a></li>
-							<li><a href="#">Sealed Product</a></li>
-							<li><a href="#">Graded Cards</a></li>
-							<li><a href="#">Mystery Bundles</a></li>
+							<li><a href="/pokemonsingles">Card Singles</a></li>
+							<li><a href="/pokemonsealedproduct">Sealed Product</a></li>
+							<li><a href="/pokemongradedcards">Graded Cards</a></li>
+							<li><a href="/pokemonbundles">Mystery Bundles</a></li>
 						</ul>
 					</li>
 					<li><a href="#">Sports Cards/Stickers</a>
 						<ul>
-							<li><a href="#">Card Singles</a></li>
-							<li><a href="#">Sticker Singles</a></li>
-							<li><a href="#">Graded Cards</a></li>
-							<li><a href="#">Sealed Product</a></li>
+							<li><a href="/sportssinglecards">Card Singles</a></li>
+							<li><a href="/sportssinglestickers">Sticker Singles</a></li>
+							<li><a href="/sportsgradedcards">Graded Cards</a></li>
+							<li><a href="/sportssealedproduct">Sealed Product</a></li>
 						</ul>
 					</li>
-					<li><a href="#">Funko</a></li>
+					<li><a href="/funko">Funko</a></li>
 					<li><a href="#">Other TCG's</a>
 					<ul>
-							<li><a href="#">Magic: The Gathering</a></li>
-							<li><a href="#">YU-GI-OH</a></li>
+							<li><a href="/magicthegathering">Magic: The Gathering</a></li>
+							<li><a href="/yugioh">YU-GI-OH</a></li>
 						</ul></li>
-					<li><a href="#">Accessories</a></li>
-					<li><a href="#">Sale</a></li>
-					<li><a href="#">Coming Soon</a></li>
+					<li><a href="/accessories">Accessories</a></li>
+					<li><a href="/sale">Sale</a></li>
+					<li><a href="/comingsoon">Coming Soon</a></li>
 				</ul>
 			</nav>
   	</div>
@@ -84,6 +88,15 @@
   <script src="{% static 'flaashCollectables/js/popper.js' %}"></script>
   <script src="{% static 'flaashCollectables/js/bootstrap.min.js' %}"></script>
   <script src="{% static 'flaashCollectables/js/main.js' %}"></script>
+
+  <!-- START PAGE CONTENT -->
+
+  <div id="content" name="content">
+  	{% block content %}
+  	{% endblock %}
+  </div>
+
+  <!-- END PAGE CONTENT -->
 
   <!-- FOOTER START -->
 
