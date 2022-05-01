@@ -11,6 +11,60 @@
   box-sizing: border-box;
 }
 
+nav {
+	height: 70px;
+	width:  90%;
+	margin:  auto;
+	font-size: 16px;
+	text-transform: uppercase;
+}
+
+nav ul {
+	float: left;
+}
+
+nav ul li {
+	float: left;
+	list-style: none;
+	position: relative;
+}
+
+nav ul li a {
+	display:  block;
+	text-decoration: none;
+	padding: 15px 15px 0px 15px;
+	color:  gray;
+}
+
+nav ul li a:hover {
+	color: #F6CA36;
+}
+
+nav ul li ul {
+	display: none;
+	position: absolute;
+	background-color: #fff;
+	box-shadow: 0px 5px 20px -17px rgb(0 0 0 / 34%);
+	border-radius: 0px 0px 4px 4px;
+}
+
+nav ul li:hover ul {
+	display: block;
+}
+
+nav ul li ul li {
+	width: 200px;
+	border-radius: 4px;
+}
+
+nav ul li ul li a {
+	padding: 6px 14px;
+}
+
+nav ul li ul li a:hover {
+	color: #F6CA36;
+}
+
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
@@ -3369,7 +3423,8 @@ input[type="button"].btn-block {
   flex-wrap: wrap;
   padding-left: 0;
   margin-bottom: 0;
-  list-style: none; }
+  list-style: none; 
+}
 
 .nav-link {
   display: block;
@@ -8288,5 +8343,11 @@ h1, h2, h3, h4, h5,
 
 .dropdown-toggle::after {
   display: none; }
+
+nav .mynav {
+ 	width: 70%;
+ 	height: 60px;
+ 	background-color: red;
+  }
 
 
