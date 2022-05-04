@@ -6,13 +6,30 @@
 {% endblock title %}
 
 {% block content%}
+
 <div class="container-flex" style="max-width: 1000px; height: auto; padding-top: 5px;">
 	
 	<!-- START BUY/SELL SECTION -->
 	<div class="row" style="padding: 0 15px;">
-		<div class="column" style="width: 49%; background-color: #fff; height: 400px; border-radius: 4px; box-shadow: 0px 5px 20px -17px rgb(0 0 0 / 34%); text-align: center;">BUY FROM US SECTION</div>
+		<div class="column">
+			<div class="image">
+				<img class="image__img" src="{% static 'flaashCollectables/images/Astral-RadianceTile.jpg' %}" alt="Astral Radiance">
+				<div class="image__overlay">
+					<div class="image__title">Astral Radiance</div>
+					<p class="image__description">Shop Here Now!</p>
+				</div>
+			</div>
+		</div>
 		<div class="column" style="width:  2%; height: 400px;"></div>
-		<div class="column" style="width: 49%; background-color: #fff; height: 400px; border-radius: 4px; box-shadow: 0px 5px 20px -17px rgb(0 0 0 / 34%); text-align: center;">SELL TO US SECTION</div>
+		<div class="column">
+			<div class="image">
+				<img class="image__img" src="{% static 'flaashCollectables/images/SellToUsTile.jpg' %}" alt="Sell To Us">
+				<div class="image__overlay">
+					<div class="image__title">Sell To Us</div>
+					<p class="image__description">We Will Buy Your Unwanted Cards!</p>
+				</div>
+			</div>
+		</div>
 	</div>
 
 	<div class="container" style="height: 15px; width: 100%;"></div>
