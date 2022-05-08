@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from .models import PokemonSingle
 
 # Create your views here.
 
@@ -13,7 +14,9 @@ def home(response):
 # Pokemon Section
 
 def pokemonsingles(response):
-	return render(response, "flaashCollectables/pokemon/pokemonsingles.html", {})
+	pokemonsingles_list = PokemonSingle.objects.all()
+	return render(response, "flaashCollectables/pokemon/pokemonsingles.html", 
+		{'pokemonsingles_list' : pokemonsingles_list})
 
 def pokemonsealedproduct(response):
 	return render(response, "flaashCollectables/pokemon/pokemonsealedproduct.html", {})

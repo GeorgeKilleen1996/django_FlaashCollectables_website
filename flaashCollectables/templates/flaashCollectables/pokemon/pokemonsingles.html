@@ -7,4 +7,14 @@
 
 {% block content%}
 <h1>Pokemon Singles</h1>
+
+<ul>
+{% for card in pokemonsingles_list %}
+
+	<img src="{{ card.image.url }}">
+
+{% endfor %}
+</ul>
+
+{{ pokemonsingles_list }}
 {% endblock %}
