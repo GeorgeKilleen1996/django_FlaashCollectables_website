@@ -1,0 +1,34 @@
+{% extends 'flaashCollectables/base.html' %}
+{% load static %}
+
+{% block title %}
+<title>Sell To Us | Sell Your Unwanted Bulk Pokemon Cards To Us | Flaash Collectables</title>
+{% endblock title %}
+
+{% block content %}
+
+<h1 style="text-align: center; font-size: 30px; color: gray;">SELL TO US!</h1>
+<hr class="solid" style="padding-bottom: 3px;">
+<p style="text-align: center;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+<div style="padding:5px;"></div>
+<div class="container__tile" style="height: auto; width: 100%; padding: 10px;">
+
+	{% if submitted %}
+
+	You have successfully submitted your request for selling your unwanted Pokemon cards!
+
+	{% else %}
+
+	<form action="" method=POST>
+		{% csrf_token %}
+
+		{{ form.as_p }}
+
+		<input type="submit" name="Submit" class="btn btn-warning">
+	</form>
+
+	{% endif %}
+</div>
+
+{% endblock content %}

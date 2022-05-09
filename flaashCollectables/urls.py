@@ -26,4 +26,7 @@ path("accessories", views.accessories, name="accessories"),
 path("sale", views.sale, name="sale"),
 # Coming Soon section
 path("comingsoon", views.comingsoon, name="comingsoon"),
+
+# Sell To Us section
+path("selltous", views.selltous, name="selltous"),
 ]

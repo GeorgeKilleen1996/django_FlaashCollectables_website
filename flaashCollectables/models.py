@@ -1,4 +1,5 @@
 from django.db import models
+import datetime
 
 # Create your models here.
 
@@ -24,4 +25,24 @@ class PokemonSingle(models.Model):
 	quantity = models.IntegerField('Quantity')
 
 	def __str__(self):
-		return self.itemName
+		return self.itemName + ' - ' + str(self.setName)
+
+class SellToUsForm(models.Model):
+	firstName = models.CharField('First Name', max_length=50)
+	lastName = models.CharField('Last Name', max_length=50)
+	emailAddress = models.EmailField('Email Address')
+	addressLine1 = models.CharField('Address Line', max_length=200)
+	city = models.CharField('City', max_length=20)
+	postCode = models.CharField('Post Code', max_length=50)
+	cucCards = models.IntegerField('Common Uncommon Cards')
+	rCards = models.IntegerField('Rare Cards')
+	rholoCards = models.IntegerField('Reverse Holo Cards')
+	holoCards =  models.IntegerField('Holo Cards')
+	specialCards = models.IntegerField('Special Cards')
+	vCards = models.IntegerField('V Cards')
+	energyCards = models.IntegerField('Energy Cards')
+	trainerCards = models.IntegerField('Trainer Cards')
+	totalCards = models.IntegerField('Total Cards')
+
+	def __str__(self):
+		return self.firstName + ' ' + self.lastName + ' - ' + str(datetime.date.today()) + ' (' + str(self.totalCards) + ' cards)'

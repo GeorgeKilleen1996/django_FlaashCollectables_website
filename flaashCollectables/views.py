@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from .models import PokemonSingle
+from .forms import SellingForm
+from django.http import HttpResponseRedirect
 
 # Create your views here.
 
@@ -68,3 +70,19 @@ def sale(response):
 
 def comingsoon(response):
 	return render(response, "flaashCollectables/comingsoon.html", {})
+
+# Sell To Us Section
+
+def selltous(request):
+	submitted = False
+	if request.method == "POST":
+		form = SellingForm(request.POST)
+		if form.is_valid():
+			form.save()
+			return HttpResponseRedirect('/selltous?submitted=True')
+	else:
+		form = SellingForm
+		if 'submitted' in request.GET:
+			submitted = True
+
+	return render(request, "flaashCollectables/selltous.html", {'form' : form, 'submitted' : submitted })
