@@ -6,15 +6,26 @@
 {% endblock title %}
 
 {% block content%}
-<h1>Pokemon Singles</h1>
+<h1 style="text-align: center; font-size: 30px; color: gray;">POKEMON SINGLES</h1>
+<hr class="solid" style="padding-bottom: 3px;">
+<p style="text-align: center;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
-<ul>
+<div style="display: inline-flex; flex-wrap: wrap; justify-content: flex-start;">
 {% for card in pokemonsingles_list %}
 
-	<img src="{{ card.image.url }}">
+<div class="container__tile" style="width:245px; height: 400px; margin:2px;">
+
+	<img src="{{ card.image.url }}" style="width:231px; height: 322px; padding:5px 0px;">
+	<a href="#" style="font-size: 15px;">{{ card.itemName }}</a>
+	<hr class="solid" style="padding-bottom: 3px;">
+		<div class="row" style="display: inline-flex; justify-content: space-evenly; width: 100%">
+			<div class="column">
+				<a style="font-size: 25px;"><strong>£{{ card.init_price}}</strong></a>
+			</div>
+		</div>
+</div>
 
 {% endfor %}
-</ul>
+</div>
 
-{{ pokemonsingles_list }}
 {% endblock %}
